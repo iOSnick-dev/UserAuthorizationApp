@@ -13,7 +13,16 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-
+    // MARK: - Private properties
+    private let user = "User"
+    private let password = "Password"
+    
+    // MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let welcomeVC = segue.destination as! WelcomeViewController
+        welcomeVC.user = user
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -21,6 +30,10 @@ class LoginViewController: UIViewController {
 
     // MARK: - IBActions
     @IBAction func logInPressed() {
+        if userNameTextField.text != user || passwordTextField.text != password {
+            showAlert(title: "Invalid login or password", message: "Please, enter correct login and password")
+        }
+        
         
     }
     
@@ -31,6 +44,19 @@ class LoginViewController: UIViewController {
     
     
     
+    
 
 }
 
+// MARK: - Private Methods
+extension LoginViewController {
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
+            self.userNameTextField.text = ""
+            self.passwordTextField.text = ""
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+}
