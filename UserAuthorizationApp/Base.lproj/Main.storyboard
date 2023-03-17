@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UserAuthorizationApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="UserAuthorizationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,6 +40,10 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Log in"/>
+                                        <connections>
+                                            <action selector="logInPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="saU-gu-Eud"/>
+                                            <segue destination="oDG-YM-U9q" kind="presentation" modalPresentationStyle="fullScreen" id="xT1-FT-BbX"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="Usa-gj-8fs">
                                         <rect key="frame" x="0.0" y="160" width="287" height="27"/>
@@ -62,27 +66,31 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
                             <constraint firstItem="jQS-PV-Z4j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="McW-FE-xDU"/>
                             <constraint firstItem="jQS-PV-Z4j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="190" id="icI-FM-7Jx"/>
                             <constraint firstItem="jQS-PV-Z4j" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="y2D-QC-nTg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="65d-PF-XE6" id="log-FI-PSo"/>
+                        <outlet property="userNameTextField" destination="aKr-nl-02h" id="uSG-oQ-qLa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="64.799999999999997" y="-27.436281859070466"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="LUQ-B6-s6g">
             <objects>
-                <viewController id="oDG-YM-U9q" sceneMemberID="viewController">
+                <viewController id="oDG-YM-U9q" customClass="WelcomeViewController" customModule="UserAuthorizationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SgX-du-kP3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kly-Y8-sRt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kly-Y8-sRt">
                                 <rect key="frame" x="87.5" y="105" width="200" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="gKh-f6-eg4"/>
@@ -91,35 +99,50 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tW7-7F-hg2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tW7-7F-hg2">
                                 <rect key="frame" x="156" y="174" width="63" height="70"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="58"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEX-PW-Ze7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEX-PW-Ze7">
                                 <rect key="frame" x="152.5" y="519" width="70" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="FKm-mn-MBU"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log out"/>
+                                <connections>
+                                    <segue destination="naO-Bh-MHY" kind="unwind" unwindAction="unwindFor:" id="Vlh-kV-UUy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rbh-ul-liZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Kly-Y8-sRt" firstAttribute="top" secondItem="Rbh-ul-liZ" secondAttribute="top" constant="105" id="6Fy-jP-g4v"/>
                             <constraint firstItem="tW7-7F-hg2" firstAttribute="top" secondItem="Kly-Y8-sRt" secondAttribute="bottom" constant="40" id="Qhq-Nf-7Du"/>
                             <constraint firstItem="tW7-7F-hg2" firstAttribute="centerX" secondItem="SgX-du-kP3" secondAttribute="centerX" id="fZl-0A-lMq"/>
+                            <constraint firstItem="Rbh-ul-liZ" firstAttribute="bottom" secondItem="vEX-PW-Ze7" secondAttribute="bottom" constant="113" id="g8A-MI-1VE"/>
                             <constraint firstItem="vEX-PW-Ze7" firstAttribute="centerX" secondItem="SgX-du-kP3" secondAttribute="centerX" id="je1-je-tGa"/>
                             <constraint firstItem="Kly-Y8-sRt" firstAttribute="centerX" secondItem="SgX-du-kP3" secondAttribute="centerX" id="pJ3-Lz-IuL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="Kly-Y8-sRt" id="iba-0U-Yve"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LJE-cG-hFE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="naO-Bh-MHY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="796" y="-27.436281859070466"/>
+            <point key="canvasLocation" x="802" y="-27"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
