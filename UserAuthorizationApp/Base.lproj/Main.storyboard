@@ -74,6 +74,50 @@
             </objects>
             <point key="canvasLocation" x="64.799999999999997" y="-27.436281859070466"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="LUQ-B6-s6g">
+            <objects>
+                <viewController id="oDG-YM-U9q" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SgX-du-kP3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kly-Y8-sRt">
+                                <rect key="frame" x="87.5" y="105" width="200" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="gKh-f6-eg4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tW7-7F-hg2">
+                                <rect key="frame" x="156" y="174" width="63" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="58"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEX-PW-Ze7">
+                                <rect key="frame" x="152.5" y="519" width="70" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Log out"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rbh-ul-liZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tW7-7F-hg2" firstAttribute="top" secondItem="Kly-Y8-sRt" secondAttribute="bottom" constant="40" id="Qhq-Nf-7Du"/>
+                            <constraint firstItem="tW7-7F-hg2" firstAttribute="centerX" secondItem="SgX-du-kP3" secondAttribute="centerX" id="fZl-0A-lMq"/>
+                            <constraint firstItem="vEX-PW-Ze7" firstAttribute="centerX" secondItem="SgX-du-kP3" secondAttribute="centerX" id="je1-je-tGa"/>
+                            <constraint firstItem="Kly-Y8-sRt" firstAttribute="centerX" secondItem="SgX-du-kP3" secondAttribute="centerX" id="pJ3-Lz-IuL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LJE-cG-hFE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796" y="-27.436281859070466"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
