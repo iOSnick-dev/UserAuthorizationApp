@@ -34,18 +34,22 @@ class LoginViewController: UIViewController {
             showAlert(title: "Invalid login or password", message: "Please, enter correct login and password")
         }
         
-        
     }
+    
+    @IBAction func forgotUserNameButton() {
+        showAlert(title: "Opps!", message: "Your name is \(user) 😉")
+    }
+    
+    @IBAction func forgotPassword() {
+        showAlert(title: "Opps!", message: "Your password is \(password) 😉")
+    }
+    
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         userNameTextField.text = ""
         passwordTextField.text = ""
     }
     
-    
-    
-    
-
 }
 
 // MARK: - Private Methods
