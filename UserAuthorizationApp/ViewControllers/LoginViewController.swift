@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
         if userNameTextField.text != user || passwordTextField.text != password {
             showAlert(title: "Invalid login or password", message: "Please, enter correct login and password")
         }
-        
+        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
     }
     
     @IBAction func forgotUserNameButton() {
