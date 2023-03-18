@@ -58,16 +58,48 @@
 		6D0AE1C129C0F64C00020FAA /* UserAuthorizationApp */ = {
 			isa = PBXGroup;
 			children = (
-				6D0AE1C229C0F64C00020FAA /* AppDelegate.swift */,
-				6D0AE1C429C0F64C00020FAA /* SceneDelegate.swift */,
-				6D0AE1C629C0F64C00020FAA /* LoginViewController.swift */,
-				6DA38FDE29C4505D00D790B2 /* WelcomeViewController.swift */,
-				6D0AE1C829C0F64C00020FAA /* Main.storyboard */,
-				6D0AE1CB29C0F64E00020FAA /* Assets.xcassets */,
-				6D0AE1CD29C0F64E00020FAA /* LaunchScreen.storyboard */,
-				6D0AE1D029C0F64E00020FAA /* Info.plist */,
+				6DA8879229C6056300DCF329 /* SupportFiles */,
+				6DA8878F29C6047E00DCF329 /* ViewControllers */,
+				6DA8879029C604DC00DCF329 /* Storyboards */,
+				6DA8879129C6052600DCF329 /* Resources */,
 			);
 			path = UserAuthorizationApp;
+			sourceTree = "<group>";
+		};
+		6DA8878F29C6047E00DCF329 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6D0AE1C629C0F64C00020FAA /* LoginViewController.swift */,
+				6DA38FDE29C4505D00D790B2 /* WelcomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6DA8879029C604DC00DCF329 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				6D0AE1C829C0F64C00020FAA /* Main.storyboard */,
+				6D0AE1CD29C0F64E00020FAA /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		6DA8879129C6052600DCF329 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6D0AE1CB29C0F64E00020FAA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6DA8879229C6056300DCF329 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				6D0AE1C229C0F64C00020FAA /* AppDelegate.swift */,
+				6D0AE1C429C0F64C00020FAA /* SceneDelegate.swift */,
+				6D0AE1D029C0F64E00020FAA /* Info.plist */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,7 +324,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UserAuthorizationApp/Info.plist;
+				INFOPLIST_FILE = UserAuthorizationApp/SupportFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -320,7 +352,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UserAuthorizationApp/Info.plist;
+				INFOPLIST_FILE = UserAuthorizationApp/SupportFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
