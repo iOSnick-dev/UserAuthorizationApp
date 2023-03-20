@@ -152,6 +152,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="oxV-tB-Lhu"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4K0-Go-4nv">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -164,10 +165,10 @@
             </objects>
             <point key="canvasLocation" x="1786" y="-27"/>
         </scene>
-        <!--View Controller-->
+        <!--User Info View Controller-->
         <scene sceneID="XOl-O8-FyD">
             <objects>
-                <viewController id="6gs-bo-Gad" sceneMemberID="viewController">
+                <viewController id="6gs-bo-Gad" customClass="UserInfoViewController" customModule="UserAuthorizationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MrZ-1Y-pAd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -195,10 +196,10 @@
             </objects>
             <point key="canvasLocation" x="2647" y="748"/>
         </scene>
-        <!--View Controller-->
+        <!--Image View Controller-->
         <scene sceneID="bfH-pQ-ok7">
             <objects>
-                <viewController id="ck5-p1-qNu" sceneMemberID="viewController">
+                <viewController id="ck5-p1-qNu" customClass="ImageViewController" customModule="UserAuthorizationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p4J-Jf-PKi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -219,6 +220,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sKk-lW-XAq"/>
+                    <connections>
+                        <outlet property="imageView" destination="WSU-Ut-cji" id="kPm-JS-Y0y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tKi-hH-7kU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
