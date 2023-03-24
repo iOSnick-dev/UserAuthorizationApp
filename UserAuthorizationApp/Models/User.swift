@@ -30,6 +30,6 @@ struct Person {
     }
     
     static func getPerson() -> Person {
-        Person(name: "Alexey", surname: "Efimov", image: "SwiftImage")
+        Person(name: "Dmitry", surname: "Borodulkin", image: "Фото 3")
     }
 }
